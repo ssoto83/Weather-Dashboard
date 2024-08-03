@@ -3,19 +3,40 @@ $(document).ready(function() {
 
     $('#search-button').on('click', function() {
         const cityName = $('#city-input').val();
+         console.log('Search button clicked'); // debugging
         if (cityName) {
             getCoordinates(cityName);
         }
     });
 
     function getCoordinates(cityName) {
-        const geoUrl = `http://api.openweathermap.org/geo/1.0/dicrect?q=${cityName}&limit=1&appid=${apiKey}`;
+        console.log('getting coordinates for:', cityName); // debugging
+        const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
 
+        $.getJSON(geoUrl, function(data) {
+            console.log('received data:', data);
+            if (data.lenght > 0) {
+                const { lat, lon } = data[0];
+                getWeatherData(lat, lon, cityName);
+                addCityToHistory(cityName);
+            } else {
+                alert('City not found');
+            }
+        }).fail(function() {
+            console.error('Error fecthing coordinates');
+        });
+    }
+
+    function getWeatherData(lat, lon, cityName) {
+        console.log('Getting weather data for coordinates:', lat, lon); // Debugging statement
+        const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+        
         $.getJSON(weatherUrl, function(data) {
+            console.log('Received weather data:', data); // Debugging statement
             displayCurrentWeather(data, cityName);
             displayForecast(data);
         }).fail(function() {
-            console.error('Error fecthing weather data');
+            console.error('Error fetching weather data');
         });
     }
 
@@ -46,7 +67,6 @@ $(document).ready(function() {
             `;
         });
         $('#forecast').html(forecastHtml);
-        })
     }
 
     function addCityHistory(cityName) {
@@ -67,4 +87,10 @@ $(document).ready(function() {
         $('#search-history').html(historyHtml);
     }
 
-    $(document).on('click', )
+    $(document).on('click', 'history-button', function() {
+        getCoordinates($(this).text());
+    });
+    
+    // Load search history on page load
+    updateHistory();
+});

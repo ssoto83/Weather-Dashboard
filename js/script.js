@@ -15,7 +15,7 @@ $(document).ready(function() {
 
         $.getJSON(geoUrl, function(data) {
             console.log('received data:', data);
-            if (data.lenght > 0) {
+            if (data.length > 0) {
                 const { lat, lon } = data[0];
                 getWeatherData(lat, lon, cityName);
                 addCityToHistory(cityName);
@@ -23,7 +23,7 @@ $(document).ready(function() {
                 alert('City not found');
             }
         }).fail(function() {
-            console.error('Error fecthing coordinates');
+            console.error('Error fetching coordinates');
         });
     }
 
@@ -50,7 +50,9 @@ $(document).ready(function() {
             <p>Humidity: ${currentWeather.main.humidity}%</p>
             <p>Wind Speed: ${currentWeather.wind.speed}m/s</p>
             `;
-            $('#current-weather').html(weatherHtml);
+            let x = $('#current-weather').html(weatherHtml);
+            console.log("1st: ", weatherHtml);
+            console.log("2st: ", x);
     }
 
     function displayForecast(data) {
@@ -69,8 +71,8 @@ $(document).ready(function() {
         $('#forecast').html(forecastHtml);
     }
 
-    function addCityHistory(cityName) {
-        let history = JSON.parse(localStorage.getItem('seachHistory')) || [];
+    function addCityToHistory(cityName) {
+        let history = JSON.parse(localStorage.getItem('searchHistory')) || [];
         if (!history.includes(cityName)) {
             history.push(cityName);
             localStorage.setItem('searchHistory', JSON.stringify(history));

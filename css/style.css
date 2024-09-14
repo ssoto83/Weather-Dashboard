@@ -1,26 +1,83 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #868484;
     margin: 0;
-    padding: 20px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 };
 
-#app {
+.cityWeatherForm {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px;
     background: white;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(70, 184, 163, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
-input, button {
+.cityInput {
+    background-color: rgb(249, 220, 224);
     padding: 10px;
-    margin: 10px 0;
-    width: 100%;
-    box-sizing: border-box;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 3px solid rgb(239, 239, 243);
+    margin: 10px;
+    width: 350px;
 }
 
-#search-history button {
-    width: auto;
-    margin: 5px;
+button[type="submit"] {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: #87cbeb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #30a28f;
+}
+
+.card {
+    margin-top: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(150deg, rgb(89, 199, 236), pink);
+    box-shadow: 2px 2 px 5px darkslategray;
+    min-width: 300px;
+}
+
+h1 {
+    margin-top: 10;
+    margin-bottom: 20px;  
+}
+
+p {
+    margin: 5px 0;
+    font-size: 1.4rem;
+}
+
+.city, .temperature {
+    font-weight: bold;
+    font-size: 3rem;
+    color: rgb(191, 46, 191);
+}
+
+.wind {
+    font-weight: bold;
+}
+
+.humidity {
+    margin-bottom: 20px;
+   
+}
+
+.emoji {
+    margin: 0;
+    font-size: 6rem;
 }

@@ -1,3 +1,13 @@
+header {
+    background: linear-gradient(rgb(72, 72, 243), rgb(234, 130, 229));
+    background-size: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-weight: bolder;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #868484;
@@ -6,6 +16,8 @@ body {
     flex-direction: column;
     align-items: center;
 };
+
+
 
 .cityWeatherForm {
     max-width: 600px;
@@ -25,6 +37,12 @@ body {
     border: 3px solid rgb(239, 239, 243);
     margin: 10px;
     width: 350px;
+    border-radius: 12px;
+}
+
+.cityInput[type="text"]:hover {
+    background-color: rgb(213, 164, 171);
+    color: white;
 }
 
 button[type="submit"] {
@@ -35,6 +53,7 @@ button[type="submit"] {
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 button[type="submit"]:hover {
@@ -50,6 +69,8 @@ button[type="submit"]:hover {
     background: linear-gradient(150deg, rgb(89, 199, 236), pink);
     box-shadow: 2px 2 px 5px darkslategray;
     min-width: 300px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
 }
 
 h1 {
@@ -81,3 +102,10 @@ p {
     margin: 0;
     font-size: 6rem;
 }
+
+.errorDisplay {
+   font-weight: bold;
+   font-size: 3rem;
+   color: black(191, 46, 191);
+}
+    

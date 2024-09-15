@@ -10,13 +10,18 @@ header {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #868484;
+    background-color: #f7f2f2;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-};
+    overflow-x: hidden;
+}
 
+ .container {
+    width: 100%;
+    box-sizing: border-box;
+ }
 
 
 .cityWeatherForm {
@@ -24,7 +29,7 @@ body {
     margin: 20px;
     background: white;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(70, 184, 163, 0.1);
+    box-shadow: 0 0 10px rgba(17, 79, 138, 0.1);
     display: flex;
     flex-direction: column;
 }
@@ -73,6 +78,25 @@ button[type="submit"]:hover {
     border-bottom-left-radius: 16px;
 }
 
+/* Container for all daily forecast cards */
+.forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Individual day cards */
+.day-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: calc(20% - 20px); /* Adjust width as needed */
+    text-align: center;
+}
+
 h1 {
     margin-top: 10;
     margin-bottom: 20px;  
@@ -109,3 +133,27 @@ p {
    color: black(191, 46, 191);
 }
     
+.search-history button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #87cbeb; /* Light blue background */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.search-history button:hover {
+    background-color: #30a28f; /* Darker blue on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.search-history button:active {
+    background-color: #1d6f5b; /* Even darker blue on click */
+}

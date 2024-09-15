@@ -25,7 +25,7 @@ if (city) {
 
 // Function to get weather data
 async function getWeather(city) {
-    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=cityName&appid=yourAPIKey&units=imperial`;
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?q=cityName&appid=yourAPIKey&units=imperial`;
     const response = await fetch(weatherUrl);
     if(!response.ok) {
         throw new Error("Could not get weather data");

@@ -5,33 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="st.css" />
 </head>
 
 <body>
     <header>
         <h1>Weather Dashboard</h1>
-    </header>
-    <form class="cityWeatherForm">
-        <input type="text" class="cityInput" placeholder="Enter City Name">
-        <button type="submit">Search</button>
-    </form>
-   
-    <div class="card" style="display: none">
-        <h1 class="city"></h1>
-        <p class="emoji"></p>
-        <p class="temperature"></p>
-        <p class="wind"></p>
-        <p class="humidity"></p>
-    </div>
+    </header><div class="container">
+        <!-- Left side: Search form and history -->
+        <aside class="sidebar">
+            <form class="cityWeatherForm">
+                <input type="text" class="cityInput" placeholder="Enter City Name">
+                <button type="submit">Search</button>
+            </form>
+            <div class="search-history">
+                <!-- Previous searches will be dynamically added here -->
+            </div>
+        </aside>
 
-     <div class="search-history">
-        <!-- Search history will be displayed here -->
-    </div> 
+        <!-- Right side: Weather forecast -->
+        <main class="main-content">
+            <div class="card" style="display: none">
+                <h1 class="city"></h1>
+                <div class="forecast-container">
+                    <!-- Daily forecast cards will be dynamically added here -->
+                </div>
+            </div>
+        </main>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="scrip.js"></script>
+    <script src="js/sci.js"></script>
 
 </body>
 

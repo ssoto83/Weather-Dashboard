@@ -1,0 +1,164 @@
+/* Basic Reset and Body Styling */
+html, body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f5f5;
+    margin: 0;
+    overflow-x: hidden;
+    height: 100%;
+
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(rgb(72, 72, 243), rgb(234, 130, 229));
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-weight: bolder;
+}
+
+/* Container for Layout */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 25%;
+    float: left;
+    padding: 20px;
+}
+
+.main {
+    width: 75%;
+    float:left;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.cityWeatherForm {
+    background: rgb(245, 229, 217);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(70, 184, 163, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.cityInput {
+    background-color: rgb(249, 220, 224);
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 3px solid rgb(239, 239, 243);
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: #87cbeb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button[type="submit"]:hover {
+    background-color: #163ad8;
+}
+
+.search-history button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #87cbeb; /* Light blue background */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.search-history button:hover {
+    background-color: #163ad8; /* Darker blue on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.search-history button:active {
+    background-color: #1d6f5b; /* Even darker blue on click */
+}
+
+
+.card {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(150deg, rgb(89, 199, 236), pink);
+    box-shadow: 2px 2px 5px darkslategray;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+/* Forecast Cards Styling */
+.forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between cards */
+}
+
+.day-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(20% - 20px); /* Adjust width */
+    text-align: center;
+}
+
+.city, .temperature {
+    font-weight: bold;
+    font-size: 3rem;
+    color: rgb(191, 46, 191);
+}
+
+.emoji {
+    font-size: 6rem;
+}
+
+.errorDisplay {
+    font-weight: bold;
+    font-size: 3rem;
+    color: rgb(191, 46, 191);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cityInput {
+        width: 100%;
+    }
+
+    .forecast-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .day-card {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

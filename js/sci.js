@@ -46,6 +46,8 @@ function displayWeatherInfo(data) {
     card.appendChild(cityName);
 
     // Create a container to hold all daily forecast cards
+    const currentDayContainer = document.createElement('div');
+    currentDayContainer.className = 'currentDay';
     const forecastContainer = document.createElement('div');
     forecastContainer.className = 'forecast-container';
 

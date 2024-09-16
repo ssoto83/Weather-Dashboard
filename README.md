@@ -44,5 +44,5 @@ This project is licensed under MIT license.
 
 ## Acknowledgments  
 
-I used Google, Xpert Learning Assistant and ChatGPT for help with the average funtion calculation, rendering of emojis, and css styling for displaying the current day and the next future days.
+I used Google, Xpert Learning Assistant and ChatGPT for help with the average function calculations, rendering of emojis, and css styling for displaying the current day and the next 4 days.
 

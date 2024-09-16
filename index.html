@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="st.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
     <header>
         <h1>Weather Dashboard</h1>
-    </header><div class="container">
+    </header>
+    <div class="container">
         <!-- Left side: Search form and history -->
         <aside class="sidebar">
             <form class="cityWeatherForm">
-                <input type="text" class="cityInput" placeholder="Enter City Name">
-                <button type="submit">Search for a city</button>
+                <input type="text" class="cityInput" placeholder="City Name">
+                <button type="submit">Search</button>
             </form>
             <div class="search-history">
                 <!-- Previous searches will be added here -->
@@ -26,10 +27,16 @@
         <!-- Right side: Weather forecast -->
         <main class="main-content">
             <div class="card" style="display: none">
-                <h1 class="city"</h1>
+                <h1 class="city" </h1>
             </div>
         </main>
     </div>
+    <footer>
+        <p>Weather data provided by <a href="https://openweathermap.org/forecast5" target="_blank">OpenWeatherMap</a>.
+        </p>
+        <p>Created by ssoto83</p>
+    </footer>
+
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

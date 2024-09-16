@@ -1,5 +1,5 @@
-/* Basic Reset and Body Styling */
-html, body {
+html,
+body {
     font-family: Arial, sans-serif;
     background-color: rgb(228, 228, 228);
     margin: 0;
@@ -9,15 +9,15 @@ html, body {
 
 /* Header Styling */
 header {
-    background: url(assets/backgroundImage.png);
+    background: url(../assets/backgroundImage.png);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     font-weight: bolder;
     font-size: larger;
-   }
+}
 
-/* Container for Layout */
+/* Layout container*/
 .container {
     display: flex;
     flex-direction: row;
@@ -25,12 +25,12 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0px;
-    box-sizing:border-box;
+    box-sizing: border-box;
     height: 100%;
-    
+
 }
 
-/* Sidebar Styling */
+/* Style for the search sidebar */
 .sidebar {
     flex: 1;
     max-width: 220px;
@@ -44,7 +44,7 @@ header {
 .main {
     flex: 3;
     width: 75%;
-    float:left;
+    float: left;
     padding: 20px;
     margin-right: 0px;
     box-sizing: border-box;
@@ -63,7 +63,8 @@ header {
 .cityInput {
     background-color: rgb(255, 255, 255);
     padding: 10px;
-    font-size: 2rem;
+    font-size: 1rem;
+    text-align: center;
     font-weight: bold;
     border: 3px solid rgb(239, 239, 243);
     border-radius: 12px;
@@ -74,9 +75,9 @@ header {
 button[type="submit"] {
     padding: 10px 20px;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: #87cbeb;
-    color: white;
+    color: black;
     border: none;
     cursor: pointer;
     border-radius: 8px;
@@ -96,7 +97,8 @@ button[type="submit"]:hover {
     background: linear-gradient(150deg, rgb(194, 231, 243), pink);
     color: black;
     border: none;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
+    /* Rounded corners */
     box-shadow: 2px 2px 5px darkslategray;
     font-size: 1.2rem;
     font-weight: bold;
@@ -106,8 +108,10 @@ button[type="submit"]:hover {
 }
 
 .search-history button:hover {
-    background-color: #2343d1; /* Darker blue on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    background-color: #2343d1;
+    /* Darker blue on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
     filter: brightness(0.7);
 }
 
@@ -131,6 +135,7 @@ button[type="submit"]:hover {
     margin-top: 20px;
 }
 
+/* Current day card */
 .current-day-card {
     background: linear-gradient(150deg, rgb(194, 231, 243), pink);
     padding: 10px;
@@ -144,7 +149,7 @@ button[type="submit"]:hover {
 .day-card {
     padding: 10px;
     margin: 10px;
-    display:inline-block;
+    display: inline-block;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(150deg, rgb(194, 231, 243), pink);
@@ -178,4 +183,17 @@ button[type="submit"]:hover {
         width: 100%;
         margin: 5px 0;
     }
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
 }
